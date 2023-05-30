@@ -38,3 +38,15 @@ class ServiceStartRequest(BaseModel):
     quiet: bool = True
     remove_orphans: bool = True
     wait: bool = True
+
+
+class ServiceStopRequest(BaseModel):
+
+    # NOTE: based on the arguments of
+    # https://gabrieldemarmiesse.github.io/python-on-whales/sub-commands/compose/#rm
+
+    # required fields
+    services: Optional[List[str]]
+
+    # optional fields
+    stop: bool = True
