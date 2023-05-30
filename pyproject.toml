@@ -8,6 +8,7 @@ packages = [{include = "robotair_protocol"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pydantic = "^1.10.8"
 
 
 [build-system]
