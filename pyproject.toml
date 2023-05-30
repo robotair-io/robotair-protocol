@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "robotair-protocol"
+version = "0.1.0"
+description = "Repository for the all messages related to OTA updates and monitoring."
+authors = ["Pedro Pereira"]
+readme = "README.md"
+packages = [{include = "robotair_protocol"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
