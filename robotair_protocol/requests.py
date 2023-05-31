@@ -61,3 +61,12 @@ class RegistryLoginRequest(BaseModel):
     server: str
     username: str
     password: str
+
+
+class RegistryLogoutRequest(BaseModel):
+
+    # NOTE: based on the arguments of
+    # https://gabrieldemarmiesse.github.io/python-on-whales/docker_client/#logout
+
+    # required fields
+    server: str
