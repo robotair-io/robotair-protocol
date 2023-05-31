@@ -10,15 +10,23 @@ class Image(BaseModel):
     size: int  # bytes
 
 
-class Service(BaseModel):
+class Container(BaseModel):
 
     # required fields
-    state: str
-    image: Image
+    id: str
 
     # optional fields
     ram_usage: int = 0  # bytes
     cpu_percentage: float = 0.0
+
+
+class Service(BaseModel):
+
+    # required fields
+    name: str  # NOTE: this is the service name relative to the deployment!
+    state: str
+    image: Image
+    container: Container
 
 
 class DeploymentStatusMessage(BaseModel):
