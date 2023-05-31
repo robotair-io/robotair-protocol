@@ -50,3 +50,14 @@ class ServiceStopRequest(BaseModel):
 
     # optional fields
     stop: bool = True
+
+
+class RegistryLoginRequest(BaseModel):
+
+    # NOTE: based on the arguments of
+    # https://gabrieldemarmiesse.github.io/python-on-whales/docker_client/#login
+
+    # required fields
+    server: str
+    username: str
+    password: str
