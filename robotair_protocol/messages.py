@@ -21,6 +21,7 @@ class Container(BaseModel):
     container_id: str
     container_name: str
     cpu_percentage: float
+    finished_at: str
     memory_percentage: float
     memory_used: int  # bytes
     memory_limit: int  # bytes
