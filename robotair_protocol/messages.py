@@ -24,6 +24,7 @@ class Container(BaseModel):
     memory_limit: int  # bytes
     net_download: int  # bytes
     net_upload: int  # bytes
+    started_at: str
 
 
 class Service(BaseModel):
