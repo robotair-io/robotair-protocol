@@ -6,8 +6,10 @@ class Image(BaseModel):
 
     # required fields
     tag: str
-    digest: str
-    size: int  # bytes
+
+    # optional fields
+    digest: Optional[str] = None
+    size: int = 0  # bytes
 
 
 class Container(BaseModel):
