@@ -13,8 +13,8 @@ class Image(BaseModel):
 class Container(BaseModel):
 
     # required fields
-    block_read: float  # bytes
-    block_write: float  # bytes
+    block_read: int  # bytes
+    block_write: int  # bytes
     container: str
     container_id: str
     container_name: str
