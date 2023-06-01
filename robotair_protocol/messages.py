@@ -25,13 +25,13 @@ class Container(BaseModel):
     net_download: int  # bytes
     net_upload: int  # bytes
     started_at: str
+    status: str
 
 
 class Service(BaseModel):
 
     # required fields
     name: str  # NOTE: this is the service name according to the deployment!
-    state: str
     image: Image
 
     # optional fields
