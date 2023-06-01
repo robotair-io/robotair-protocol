@@ -43,7 +43,6 @@ class Service(BaseModel):
 class DeploymentStatusMessage(BaseModel):
 
     # required fields
-    robot: str
     services: List[Service]
 
 
