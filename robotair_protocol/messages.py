@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
 
 
 class Image(BaseModel):
@@ -13,25 +13,34 @@ class Image(BaseModel):
 class Container(BaseModel):
 
     # required fields
-    id: str
-
-    # optional fields
-    ram_usage: int = 0  # bytes
-    cpu_percentage: float = 0.0
+    block_read: float  # bytes
+    block_write: float  # bytes
+    container: str
+    container_id: str
+    container_name: str
+    cpu_percentage: float
+    memory_percentage: float
+    memory_used: int  # bytes
+    memory_limit: int  # bytes
+    net_download: int  # bytes
+    net_upload: int  # bytes
 
 
 class Service(BaseModel):
 
     # required fields
-    name: str  # NOTE: this is the service name relative to the deployment!
+    name: str  # NOTE: this is the service name according to the deployment!
     state: str
     image: Image
-    container: Container
+
+    # optional fields
+    container: Optional[Container] = None
 
 
 class DeploymentStatusMessage(BaseModel):
 
     # required fields
+    robot: str
     services: List[Service]
 
 
