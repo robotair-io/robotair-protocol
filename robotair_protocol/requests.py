@@ -3,10 +3,15 @@ from typing import List, Optional
 from .compose import ComposeSpecification
 
 
-class DeploymentUpdateRequest(BaseModel):
+class DeploymentRegisterRequest(BaseModel):
 
     # required fields
     deployment: ComposeSpecification
+
+
+class DeploymentUpdateRequest(BaseModel):
+
+    pass
 
 
 class ImagePullRequest(BaseModel):
