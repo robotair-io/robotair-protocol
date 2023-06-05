@@ -9,6 +9,11 @@ class DeploymentRegisterRequest(BaseModel):
     deployment: ComposeSpecification
 
 
+class DeploymentRevertRequest(BaseModel):
+
+    pass
+
+
 class DeploymentUpdateRequest(BaseModel):
 
     pass
