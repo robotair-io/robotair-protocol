@@ -6,6 +6,7 @@ from .compose import ComposeSpecification
 class DeploymentRegisterRequest(BaseModel):
 
     # required fields
+    identifier: str
     deployment: ComposeSpecification
 
 
