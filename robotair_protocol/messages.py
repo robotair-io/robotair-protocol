@@ -44,6 +44,7 @@ class Service(BaseModel):
 class DeploymentStatusMessage(BaseModel):
 
     # required fields
+    identifier: str
     services: List[Service]
 
 
