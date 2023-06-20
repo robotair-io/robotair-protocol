@@ -48,6 +48,18 @@ class DeploymentStatusMessage(BaseModel):
     services: List[Service]
 
 
+class SystemStatusMessage(BaseModel):
+
+    # required fields
+    cpu_usage: List[int]
+    memory_total: int  # bytes
+    memory_used: int  # bytes
+    memory_percentage: float
+
+    # optional fields
+    battery_percentage: Optional[float] = None
+
+
 class ErrorMessage(BaseModel):
 
     # required fields
